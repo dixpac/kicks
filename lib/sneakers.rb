@@ -23,6 +23,11 @@ require 'sneakers/middleware/config'
 require 'sneakers/worker'
 require 'sneakers/publisher'
 
+if defined?(Rails)
+  require 'active_job'
+  require 'active_job/queue_adapters/sneakers_adapter'
+end
+
 module Sneakers
   extend self
 
