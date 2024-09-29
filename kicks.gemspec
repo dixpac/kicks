@@ -42,4 +42,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'guard', '~> 2.18'
   gem.add_development_dependency 'guard-minitest', '~> 2.4'
   gem.add_development_dependency 'pry-byebug', '~> 3.9'
+  gem.add_development_dependency 'activejob', '>= 6.0'
+  gem.add_development_dependency 'activesupport', '>= 6.0'
 end
