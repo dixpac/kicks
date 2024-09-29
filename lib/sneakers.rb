@@ -22,8 +22,8 @@ require 'sneakers/content_encoding'
 require 'sneakers/middleware/config'
 require 'sneakers/worker'
 require 'sneakers/publisher'
+require 'active_job/queue_adapters/sneakers_adapter' if defined?(ActiveJob)
 
-require 'sneakers/rails' if defined?(::Rails::Engine)
 
 module Sneakers
   extend self
