@@ -31,7 +31,6 @@ module ActiveJob
         from_queue 'default'
 
         def work(msg)
-          byebug
           job_data = ActiveSupport::JSON.decode(msg)
           Base.execute job_data
           ack!
