@@ -47,10 +47,15 @@ describe 'active job integration' do
       pid
     end
 
+    def wait_for_jobs_to_finish
+      sleep 5
+    end
+
     it 'aj test' do
       pid = start_active_job_workers
       TestJob.perform_later('Hello Rails!')
-      sleep 3
+
+      wait_for_jobs_to_finish
 
       Process.kill('TERM', pid)
 
